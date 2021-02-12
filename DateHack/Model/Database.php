@@ -33,4 +33,33 @@ class Database
 	  		return "error";
 	  	}
 	}
+
+	//verfy users 
+	function veryfyUser($userEmail){
+		$query = 'SELECT * FROM user WHERE email=:email';
+		$runQuery = $this->dbh->prepare($query);
+	  	$runQuery->execute(array('email' => $userEmail,));
+	  	$getData = $runQuery->fetch();
+	  	if(!empty($getData)){
+	  		return $getData;
+	  	}
+	  	else{
+	  		return "userErrror";
+	  	}
+
+	}
+
+
+	function seacrhPatner($gender){
+		$query = 'SELECT * FROM user WHERE gender=:gender';
+		$runQuery = $this->dbh->prepare($query);
+	  	$runQuery->execute(array('gender' => $gender,));
+	  	$getData = $runQuery->fetchAll();
+	  	if(!empty($getData)){
+	  		return $getData;
+	  	}
+	  	else{
+	  		return "userErrror";
+	  	}
+	}
 }

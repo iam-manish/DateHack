@@ -1,0 +1,80 @@
+*{
+	margin:0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.site-logo img{
+	width: 250px;
+	height: 60px;
+}
+
+.site-logo{
+	margin: 5px;
+}
+.profile-pic img{
+	width: 60px;
+	height: 60px;
+}
+.header-part{
+	display: flex;
+}
+.user-details{
+	display: flex;
+	margin-left: auto;
+	margin-right: 20px;
+}
+.user-details .fas{
+	margin-top: 15px;
+	padding: 5px;
+}
+/*Profile Body*/
+.user-body{
+	display: flex;
+	width: 100%;
+}
+.user-nav{
+	width: 350px;
+	height: 100vh;
+}
+.user-finder{
+	width: 100%;
+	height: 100vh;
+}
+.user-profile{
+	display: flex;
+	margin: 5px;
+}
+.user-profile p{
+	margin:35px 2px 5px 10px;
+	font-weight: bold;
+	font-size: 18px;
+}
+.user-profile img{
+	width: 100px;
+	height: 100px;
+}
+.user-profile i{
+	margin: 20px;
+}
+.user-finder{
+	border: 2px solid #000;
+	width: 100%;
+	height: 35px;
+}
+.user-radius{
+	font-size: 18px;
+}
+.user-body button{
+	border: none;
+	background-color: #fff;
+}
+.user-body .card{
+	margin: 10% 25%;
+}
+.follow-request{
+	display: flex;
+}
+.reject{
+	margin-left: 65%;
+}
+/*End Profile*/

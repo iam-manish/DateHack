@@ -1,6 +1,27 @@
 <?php
 include_once 'autoLoader.php';  
 	define('pageLoad',true);  
+	$db = new Model\Database();
+	$login = new controller\Home($db);
+
+	if(isset($_POST['submit'])){
+		$user_email = $_POST['user_email'];
+		$user_password = $_POST['user_password'];
+		if($login->userLogin($user_email, $user_password)==="empty"){
+			echo "<script>alert('Both email and password is required.');</script>";
+		}
+		else{
+			try {
+				if($login->userLogin($user_email, $user_password)==="passError"){
+					echo "<script>alert('Incorrect Username and password');</script>";
+				}
+			} catch (Exception $e) {
+				echo "<script>alert('No User Found. Please register');</script>";
+			}
+			
+		}
+
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -26,21 +47,21 @@ include_once 'autoLoader.php';
 		<div class="login-frm">
 			
 				<div class="card">
-					<form>
+					<form method="POST" action="login.php">
 	  					<div class="container">
 	  						<!-- Form Content-->
 	  						<div class="form-group">
 	    						<label for="exampleInputEmail1">Email address</label>
-	    						<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+	    						<input name="user_email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
 	    						<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
 	  						</div>
 						  <div class="form-group">
 						    <label for="exampleInputPassword1">Password</label>
-						    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+						    <input name="user_password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
 						  </div>
 
 	  						<!-- Form Content End -->
-	  						<button type="submit" class="btn btn-primary">Submit</button>
+	  						<button type="submit" name="submit" class="btn btn-primary">Submit</button>
 	  					</div>
   					</form>
   					<div class="pass-reset"><a href="#">Forget Password</a></div>
