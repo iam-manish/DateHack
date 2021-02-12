@@ -135,16 +135,92 @@ header{
 #services{
 	position: relative;
 	width: 100%;
-	height: 100vh;
+	height: auto;
 	top: 95vh;
 	background-color: #C73DCC;
 	color: #ffff;
+	padding-bottom: 15%;
 }
 .carousel-item{
 	margin-top: 35px;
 	font-family: Lobster;
-	width: 100%;
+	width: 50%;
 	text-align: center;
 	font-size: 35px;
+	margin-left: 25%;
+
+}
+#services button{
+	border: none;
+	background-color: #C73DCC;
+}
+/*End */
+
+/*Download App*/
+#download{
+	position: relative;
+	width: 100%;
+	height: auto;
+	top: 90vh;
+	color: #ffff;
+	
+}
+.download-main{
+	background: url("../../images/downloadApp.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 90vh;
+	filter: blur(4px);
+}
+.download-coentent{
+	position: absolute;
+	top: 0%;
+	left: 10%;
+	display: flex;
+}
+.dwn-img img{
+	margin-top: 55%;
+	width: 300px;
+	height: 100px;
+	cursor: pointer;
+}
+.download-img{
+	margin-top: 5%;
+	margin-left: 30%;
+}
+.download-img img{
+	width: 600px;
+	height: 500px;
+}
+/*End Download App*/
+/*Footer*/
+footer{
+	position: relative;
+	width: 100%;
+	height: auto;
+	top: 90vh;
+	background-color: #fff;
+	color: #000;
+	padding-bottom: 2%;
+	border-top: 1px solid #202020;
+	box-shadow: 0px 1px 1px rgba(50, 50, 50, 0.75);
+	display: flex;
+}
+.copy-right{
+	padding:2% 5% 0% 3%;
+	font-size: 18px;
+	font-weight: bold;
+	width: 80%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.fab{
+	cursor: pointer;
+	margin-left: 10px; 
+}
+.social-media{
+	padding:2% 5% 0% 3%;
+	font-size: 18px;
+	float: right;
 }
 /*End */

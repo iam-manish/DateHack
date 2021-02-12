@@ -1,5 +1,7 @@
 <?php
 	include_once 'autoLoader.php';  
+	define('pageLoad',true);
+	
 ?>
 <!DOCTYPE html>
 <html>
@@ -15,6 +17,7 @@
 
 	<!-- links -->
 	<link rel="stylesheet" type="text/css" href="<?= base_url?>assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="<?= base_url?>assets/font-awesome/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url?>assets/css/style.css">
 	<!-- end links  -->
 </head>
@@ -81,10 +84,10 @@
 		<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
 			<div class="carousel-inner">
 				<div class="carousel-item active">
-					Hi
+					"Nice app developed by the Team CodexOrient. Really good and where is the place where i meet my soulmate love of my life" :- Saswat Tripathi
 				</div>
 				<div class="carousel-item">
-					Namestry
+					"Glad to take part in Datehack Hackthon. It was really fun coding whole 24 hours and also finding potentials that coding for 24 hour is possible." :- Manish Thapa
 				</div>
 				<div class="carousel-item">
 					hello
@@ -99,11 +102,22 @@
 				<span class="visually-hidden">Next</span>
 			</button>
 		</div>
-
-
 	</div>
 	<!-- End of services -->
 
+	<!-- download app  -->
+	<div id="download">
+		<div class="download-main"></div>
+		<div class="download-coentent">
+			<div class="dwn-img"><img src="<?= base_url?>images/playstore.png" alt="Mobile App versions"></div>
+			<div class="download-img"><img src="<?= base_url?>images/mobile.png" alt="Mobile App versions"></div>
+		</div>
+	</div>
+	<!-- End Downlaod app -->
+
+	<!-- Footer -->
+	<?php include_once 'view/footer.php'; ?>
+	<!-- End  -->
 	<!-- script -->
 	<script type="text/javascript" src="<?= base_url?>assets/bootstrap/js/bootstrap.min.js"></script>
 	<!-- end script -->
