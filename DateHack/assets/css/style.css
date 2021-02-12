@@ -2,6 +2,9 @@
 	margin: 0;
 	padding: 0;
 }
+body{
+	background-color: #fff;
+}
 header{
 	position: relative;
 	z-index: 999;
@@ -34,7 +37,9 @@ header{
 }
 .body-section{
 	width: 100%;
-	height: 89vh;
+	height: 100vh;
+	position: fixed;
+	top: 0;
 }
 .body-main{
 	background-image: url("../../images/background.svg"),url("../../images/blur.png");
@@ -55,7 +60,7 @@ header{
   	top: 0%;
 	left: 0%;
   	width: 100%;
-	height: 100%;
+	height: 101%;
 
 }
 .main-text{
@@ -76,7 +81,62 @@ header{
 	top: 52%;
 	left: 40%;
 }
-.main-container{
+.main-buttons{
+	position: absolute;
+	top: 60%;
+	left: 40%;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+.hm-btn{
+	background-color: #C73DCC;
+	padding: 5% 15px;
+	text-align: center;
+	margin: 5px;
+	width: 150px;
+	height: 50px;
+	cursor: pointer;
+	color: #fff;
+}
+/*About Us*/
+#about-us{
+	position: relative;
+	width: 100%;
+	height: auto;
+	top: 100vh;
+	background-color: #fff;
+	padding-bottom: 3%;
+}
+.ab-text{
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 35px;
+}
+.upper-line{
+	margin: 20px auto;
+	width: 18%;
+	height: 10px;
+	background-color: #C73DCC;
+}
+.ab-card{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 25px auto;
+}
+#about-us .card{
+	margin: 2px 5px 2px 35px;
+}
+/*End About Us*/
+
+/*Services*/
+#services{
+	position: relative;
 	width: 100%;
 	height: 100vh;
+	top: 95vh;
+	background-color: #C73DCC;
+	color: #ffff;
 }
+/*End */

@@ -15,7 +15,6 @@
 
 	<!-- links -->
 	<link rel="stylesheet" type="text/css" href="<?= base_url?>assets/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="<?= base_url?>assets/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url?>assets/css/style.css">
 	<!-- end links  -->
 </head>
@@ -36,14 +35,79 @@
 		<div class="body-color"></div>
 		<div class="main-text">Meet new and intersting people.</div>
 		<div class="main-sm-text">Some default text to fell the space</div>
-		<div class="main-buttons">
+		<div class="main-buttons d-flex">
 			<div class="hm-btn">Get Start</div>
 			<div class="hm-btn">Know More</div>
 		</div>
 	</section>
-	<div class="main-container">
-		<div></div>
-	</div>
 	<!-- End of section -->
+	<!-- About Us -->
+	<div id="about-us">
+		<div class="upper-line"></div>
+		<div class="ab-text">How Datemandu Works</div>
+
+		<div class="ab-card">
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="<?= base_url?>images/background.svg" alt="Card image cap">
+				<div class="card-body">
+    				<h5 class="card-title">Card title</h5>
+    				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  				</div>
+			</div>
+
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="<?= base_url?>images/background.svg" alt="Card image cap">
+				<div class="card-body">
+    				<h5 class="card-title">Card title</h5>
+    				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  				</div>
+			</div>
+
+
+			<div class="card" style="width: 18rem;">
+				<img class="card-img-top" src="<?= base_url?>images/background.svg" alt="Card image cap">
+				<div class="card-body">
+    				<h5 class="card-title">Card title</h5>
+    				<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End  -->
+	<!-- Services -->
+	<div id="services">
+		<div class="upper-line"></div>
+		<div class="ab-text">Our Happy Users</div>
+
+		<div class="service-carousel">
+			<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+     Hello
+    </div>
+    <div class="carousel-item">
+      hi
+    </div>
+    <div class="carousel-item">
+     this
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+		</div>
+	</div>
+	<!-- End of services -->
+
+	<!-- script -->
+	<script type="text/javascript" src="<?= base_url?>assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="<?= base_url?>assets/bootstrap/js/bootstrap.min.js"></script>
+	<!-- end script -->
 </body>
 </html>
