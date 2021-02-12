@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'swipe.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 
-import "MatchCard.dart";
 
 class HomePage extends StatelessWidget {
   @override
@@ -22,10 +22,25 @@ class HomePage extends StatelessWidget {
               accountName: Text('Name'),
               accountEmail: Text('user@gmail.com'),
               decoration:BoxDecoration(
-                  color: Colors.purpleAccent
+                  color: Colors.pinkAccent
               ),
             ),
 
+            ListTile(
+              leading: CircleAvatar(
+                backgroundColor: Colors.grey,
+                child: Icon(Icons.home,
+                  color: Colors.black,
+                  size: 30.0,
+                ),
+              ),
+              title: Text("Home"),
+
+              onTap: (){
+                Navigator.pushNamed(context, '/');
+
+              },
+            ),
             ListTile(
               leading: CircleAvatar(
                 backgroundColor: Colors.grey,
@@ -37,7 +52,7 @@ class HomePage extends StatelessWidget {
               title: Text("Profile"),
 
               onTap: (){
-                Navigator.pushNamed(context, '/profile');
+                Navigator.pushNamed(context, '/User-profile');
 
               },
             ),
@@ -93,32 +108,8 @@ class HomePage extends StatelessWidget {
 
       ),
       //card corraussel
+      body: SwipeFeedPage(),
 
-      body:CarouselSlider(
-
-            options: CarouselOptions(height: 600.0),
-
-            items: [1,2,3,4,5].map((i) {
-              return Builder(
-
-                builder: (BuildContext context) {
-
-                  return Container(
-                      width: MediaQuery.of(context).size.width,
-                      margin: EdgeInsets.only(left: 0, top:50, right: 0, bottom:0),
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                          color: Colors.white24
-                      ),
-                      child:new Image.asset("assets/images/Datemandu.png"),
-
-                      // Text('text $i', style: TextStyle(fontSize: 16.0),)
-                  );
-                },
-              );
-            }).toList(),
-
-          ),
 
 
       bottomNavigationBar: BottomNavigationBar(
