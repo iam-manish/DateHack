@@ -8,7 +8,7 @@ function AutoLoadeClasses($name){
 }
 $url = $_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF'];
 $sep_url = explode("/", $url);
-$base_url = 'http://'.$_SERVER['HTTP_HOST'].'/'.$sep_url[1].'/'.$sep_url[2].'/'.$sep_url[3].'/';
+$base_url = 'http://'.$_SERVER['HTTP_HOST'].'/'.$sep_url[1].'/'.$sep_url[2].'/';
 define('base_url', $base_url);
 
 ?>

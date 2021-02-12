@@ -21,9 +21,9 @@
 </head>
 <body>
 	<!-- header -->
-	<header class="d-flex">
+	<header class="">
 		<div class="img-logo"><img src="<?= base_url?>/images/app/logo.png" alt="Datemandu Logo"></div>
-		<div class="head-wrapper d-flex">
+		<div class="head-wrapper">
 			<div class="login-wrapper">Login</div>
 			<div class="register-wrapper">Register</div>
 		</div>
@@ -32,9 +32,11 @@
 
 	<!-- Section -->
 	<section class="body-main">
-		
+		<div class="main-text">Meet new and intersting people.</div>
 	</section>
-	<div class="main-container"></div>
+	<div class="main-container">
+		hello World
+	</div>
 	<!-- End of section -->
 </body>
 </html>
