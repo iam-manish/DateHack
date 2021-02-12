@@ -31,11 +31,18 @@
 	<!-- End of Header -->
 
 	<!-- Section -->
-	<section class="body-main">
+	<section class="body-section">
+		<div class="body-main"></div>
+		<div class="body-color"></div>
 		<div class="main-text">Meet new and intersting people.</div>
+		<div class="main-sm-text">Some default text to fell the space</div>
+		<div class="main-buttons">
+			<div class="hm-btn">Get Start</div>
+			<div class="hm-btn">Know More</div>
+		</div>
 	</section>
 	<div class="main-container">
-		hello World
+		<div></div>
 	</div>
 	<!-- End of section -->
 </body>
