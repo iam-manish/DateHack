@@ -44,6 +44,21 @@ class HomePage extends StatelessWidget {
             ListTile(
               leading: CircleAvatar(
                 backgroundColor: Colors.grey,
+                child: Icon(Icons.message,
+                  color: Colors.black,
+                  size: 30.0,
+                ),
+              ),
+              title: Text("Messages"),
+
+              onTap: (){
+                Navigator.pushNamed(context, '/message');
+
+              },
+            ),
+            ListTile(
+              leading: CircleAvatar(
+                backgroundColor: Colors.grey,
                 child: Icon(Icons.person_sharp,
                   color: Colors.black,
                   size: 30.0,
@@ -111,22 +126,6 @@ class HomePage extends StatelessWidget {
       body: SwipeFeedPage(),
 
 
-
-      bottomNavigationBar: BottomNavigationBar(
-
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home,color: Color(0xFFAD1457),),
-            title: Text('Home',style: TextStyle(
-              color: Color(0xFFAD1457),
-            ),),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.message),
-            title: Text('Message'),
-          ),
-        ],
-      ),
        );
   }
 

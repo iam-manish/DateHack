@@ -24,8 +24,7 @@ class ProfileCardDraggable extends StatelessWidget {
                       style: TextStyle(
                           fontSize: 20.0, fontWeight: FontWeight.w700)),
                   Padding(padding: EdgeInsets.only(bottom: 8.0)),
-                  Text('Bio', textAlign: TextAlign.start),
-
+                  Text('90% Match Compatiblity', textAlign: TextAlign.start),
                 ],
               ))
         ],

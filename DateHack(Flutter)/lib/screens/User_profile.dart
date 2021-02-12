@@ -52,7 +52,21 @@ class _UserProfilePageState extends State<UserProfilePage> {
 
                 },
               ),
+              ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: Icon(Icons.message,
+                    color: Colors.black,
+                    size: 30.0,
+                  ),
+                ),
+                title: Text("Messages"),
 
+                onTap: (){
+                  Navigator.pushNamed(context, '/message');
+
+                },
+              ),
               ListTile(
                 leading: CircleAvatar(
                   backgroundColor: Colors.grey,
@@ -113,7 +127,7 @@ class _UserProfilePageState extends State<UserProfilePage> {
           ),
         ),
         appBar: AppBar(
-          backgroundColor: Colors.redAccent,
+          backgroundColor: Color(0xFFAD1457),
           title: Center(
             child: const Text('Personal Profile'),
           ),
@@ -123,9 +137,8 @@ class _UserProfilePageState extends State<UserProfilePage> {
             Container(
               height: 250,
               decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    colors: [Colors.redAccent.shade200, Colors.deepOrange.shade700]
-                ),
+                    color: Color(0xFFAD1457),
+
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -138,23 +151,21 @@ class _UserProfilePageState extends State<UserProfilePage> {
                         backgroundColor: Colors.red.shade300,
                         minRadius: 30.0,
                         child: Icon(
-                          Icons.close,
+                          Icons.assignment_ind_outlined,
                           size: 25.0,
                         ),
                       ),
                       CircleAvatar(
-                        // backgroundColor: Colors.white70,
-                        // maxRadius: 60.0,
-                        // child: new Image.asset("assets/images/astranout.jpg"),
-                        //   radius: 50.0,
-
+                        backgroundColor: Colors.white70,
+                        maxRadius: 60.0,
+                        child:Icon( Icons.person_sharp, size: 50.0,)
 
                       ),
                       CircleAvatar(
                         backgroundColor: Colors.red.shade300,
                         minRadius: 30.0,
                         child: Icon(
-                          Icons.check_circle_rounded,
+                          Icons.edit,
                           size: 25.0,
                         ),
                       ),
@@ -193,9 +204,8 @@ class _UserProfilePageState extends State<UserProfilePage> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    subtitle:Icon(
-                      Icons.check_circle_rounded,
-                      size: 25.0,
+                    subtitle: Text(
+                      "Fond of travelling and extermly intovert"
                     ),
                   ),
 

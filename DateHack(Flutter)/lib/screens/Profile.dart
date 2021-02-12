@@ -52,7 +52,21 @@ class _ProfilePageState extends State<ProfilePage> {
 
                 },
               ),
+              ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: Icon(Icons.message,
+                    color: Colors.black,
+                    size: 30.0,
+                  ),
+                ),
+                title: Text("Messages"),
 
+                onTap: (){
+                  Navigator.pushNamed(context, '/message');
+
+                },
+              ),
               ListTile(
                 leading: CircleAvatar(
                   backgroundColor: Colors.grey,
@@ -113,7 +127,7 @@ class _ProfilePageState extends State<ProfilePage> {
           ),
         ),
         appBar: AppBar(
-          backgroundColor: Colors.redAccent,
+          backgroundColor: Color(0xFFAD1457),
           title: Center(
             child: const Text('Profile'),
           ),
@@ -123,9 +137,8 @@ class _ProfilePageState extends State<ProfilePage> {
           Container(
             height: 250,
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Colors.redAccent.shade200, Colors.deepOrange.shade700]
-              ),
+                color: Color(0xFFAD1457),
+
             ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -143,10 +156,9 @@ class _ProfilePageState extends State<ProfilePage> {
                   ),
                 ),
                 CircleAvatar(
-                  // backgroundColor: Colors.white70,
-                  // maxRadius: 60.0,
-                  // child: new Image.asset("assets/images/astranout.jpg"),
-                  //   radius: 50.0,
+                    backgroundColor: Colors.white70,
+                    maxRadius: 60.0,
+                    child:Icon( Icons.person_sharp, size: 50.0,)
 
 
                 ),
@@ -193,28 +205,26 @@ class _ProfilePageState extends State<ProfilePage> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  subtitle:Icon(
-                    Icons.check_circle_rounded,
-                    size: 25.0,
+                  subtitle:Text(
+                    'Wanderer, Hala Madrid',
+                    style: TextStyle(
+                      color: Colors.black87,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   ),
 
                 Divider(),
                 ListTile(
                   title: Text(
-                    'social',
+                    'More Photos',
                     style: TextStyle(
                       color: Colors.deepOrange,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
-                  ),
-                  subtitle: Text(
-                    'link',
-                    style: TextStyle(
-                      fontSize: 18,
-                    ),
-                  ),
+                  )
                 ),
                 Divider(),
                 ListTile(
@@ -232,7 +242,6 @@ class _ProfilePageState extends State<ProfilePage> {
           )
         ],
       ),
-
       ),
     );
 
