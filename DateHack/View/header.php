@@ -24,7 +24,7 @@
 <body>
 	<!-- header -->
 	<header class="">
-		<div class="img-logo"><img src="<?= base_url?>/images/app/logo.png" alt="Datemandu Logo"></div>
+		<div class="img-logo"><a href="index.php"><img src="<?= base_url?>/images/app/logo.png" alt="Datemandu Logo"></a></div>
 		<div class="head-wrapper">
 			<div class="login-wrapper"><a href="login.php">Login</a></div>
 			<div class="register-wrapper"><a href="register.php">Register</a></div>
