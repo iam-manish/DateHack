@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 *{
 	margin: 0;
 	padding: 0;
@@ -42,7 +43,7 @@ header{
 	top: 0;
 }
 .body-main{
-	background-image: url("../../images/background.svg"),url("../../images/blur.png");
+	background-image: url("../../images/background.svg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	width: 100%;
@@ -138,5 +139,12 @@ header{
 	top: 95vh;
 	background-color: #C73DCC;
 	color: #ffff;
+}
+.carousel-item{
+	margin-top: 35px;
+	font-family: Lobster;
+	width: 100%;
+	text-align: center;
+	font-size: 35px;
 }
 /*End */
