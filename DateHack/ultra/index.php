@@ -58,7 +58,7 @@ print_r($fetchUser)
 			<div class="user-profile"><i class="fas fa-thumbs-up fa-lg fa-3x"></i><p>Likes</p></div>
 		</div>
 		<div class="user-finder">
-			<div class="user-radius"><span style="color: #C73DCC">User</span> located with in  <span style="color: #C73DCC"><?php echo rand(1,10); ?></span> K.M.</div>
+			<div class="user-radius"><span style="color: #C73DCC">User</span> located with in  <span id="distance" style="color: #C73DCC"><?php echo "2"; ?></span> K.M.</div>
 
 			<!-- Care -->
 		<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -84,7 +84,7 @@ print_r($fetchUser)
     				<div class="card" style="width: 18rem;">
   						<img class="card-img-top" src="<?= base_url?>/images/user/<?php echo $profile_img;?>" alt="Card image cap">
 					  	<div class="card-body">
-					    	<p class="card-text">Name:- <?php echo $user['first_name'].' '.$user['last_name']; ?><br>Zodiac :-<?php echo $controller->zodiacFinder($user['date_of_birth']); ?><br>Match :- <?php echo rand(25,95); ?><br>Description:- Here is user details.This can also be knows as the users details that the user can see and request for the follow request.</p>
+					    	<p class="card-text">Name:- <?php echo $user['first_name'].' '.$user['last_name']; ?><br>Zodiac :-<?php echo $controller->zodiacFinder($user['date_of_birth']); ?><br>Match :- <?php echo rand(25,95)."%"; ?><br>Description:- Here is user details.This can also be knows as the users details that the user can see and request for the follow request.</p>
 					    	<div class="follow-request">
 					    		<div class="accepts"><i class="fas fa-check fa-2x"></i></div>
 					    		<div class="reject"><i class="fas fa-times-circle fa-2x"></i></div>
@@ -94,11 +94,11 @@ print_r($fetchUser)
     			</div>
     			<?php } ?>
 
-	  		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+	  		<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev" onclick="changeDistance()">
 	    		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 	    		<span class="visually-hidden">Previous</span>
 	  		</button>
-	  		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+	  		<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next" onclick="changeDistance()">
 	    		<span class="carousel-control-next-icon" aria-hidden="true"></span>
 	   			<span class="visually-hidden">Next</span>
 	  		</button>
@@ -110,7 +110,10 @@ print_r($fetchUser)
 	</div>
 	<script type="text/javascript" src="<?= base_url?>assets/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript">
-		
+		function changeDistance(){
+			var distance = document.getElementById('distance');
+			distance.innerHTML = "<?php echo rand(1,10);?>";
+		}
 	</script>
 </body>
 </html>
