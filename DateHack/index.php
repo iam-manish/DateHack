@@ -1,36 +1,4 @@
-<?php
-	include_once 'autoLoader.php';  
-	define('pageLoad',true);
-	
-?>
-<!DOCTYPE html>
-<html>
-<head>
-	<title>DateHack:Now It's Your Time To Mingle</title>
-	<!-- meta tags -->
-	<meta charset="UTF-8">
-  	<meta name="description" content="This is Hackthon DateHack Web Application designed and developed by Team CodexOrient Nami College">
-  	<meta name="keywords" content="DateHack, Team CodexOrient, Search your date patner">
-  	<meta name="author" content="Team Codex Orient">
-  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- end of meta tags -->
-
-	<!-- links -->
-	<link rel="stylesheet" type="text/css" href="<?= base_url?>assets/bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="<?= base_url?>assets/font-awesome/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="<?= base_url?>assets/css/style.css">
-	<!-- end links  -->
-</head>
-<body>
-	<!-- header -->
-	<header class="">
-		<div class="img-logo"><img src="<?= base_url?>/images/app/logo.png" alt="Datemandu Logo"></div>
-		<div class="head-wrapper">
-			<div class="login-wrapper">Login</div>
-			<div class="register-wrapper">Register</div>
-		</div>
-	</header>
-	<!-- End of Header -->
+<?php include_once 'View/header.php';   ?>
 
 	<!-- Section -->
 	<section class="body-section">
@@ -109,7 +77,10 @@
 	<div id="download">
 		<div class="download-main"></div>
 		<div class="download-coentent">
-			<div class="dwn-img"><img src="<?= base_url?>images/playstore.png" alt="Mobile App versions"></div>
+			<div class="">
+				<div class="dwn-img"><img src="<?= base_url?>images/playstore.png" alt="Mobile App versions"></div>
+				<div class="ios-img"><img src="<?= base_url?>images/ios.png" alt="Mobile IoS App versions"></div>
+			</div>
 			<div class="download-img"><img src="<?= base_url?>images/mobile.png" alt="Mobile App versions"></div>
 		</div>
 	</div>
