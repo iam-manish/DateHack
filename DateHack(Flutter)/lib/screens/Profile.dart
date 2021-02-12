@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'dart:io';
 
 class ProfilePage extends StatefulWidget {
   @override
@@ -16,13 +18,118 @@ class _ProfilePageState extends State<ProfilePage> {
 
   @override
   Widget build(BuildContext context) {
+
     return MaterialApp(
       title: 'Profile',
       home: Scaffold(
+        drawer: Drawer(
+          child: Column(
+            children: <Widget>[
+              UserAccountsDrawerHeader(
+                currentAccountPicture: CircleAvatar(
+                  backgroundColor: Colors.black,
+                  child: Icon(Icons.person,size: 50.0,),
+                ),
+                accountName: Text('Name'),
+                accountEmail: Text('user@gmail.com'),
+                decoration:BoxDecoration(
+                    color: Colors.purpleAccent
+                ),
+              ),
+
+              ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: Icon(Icons.home,
+                    color: Colors.black,
+                    size: 30.0,
+                  ),
+                ),
+                title: Text("Home"),
+
+                onTap: (){
+                  Navigator.pushNamed(context, '/');
+
+                },
+              ),
+              ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: Icon(Icons.message,
+                    color: Colors.black,
+                    size: 30.0,
+                  ),
+                ),
+                title: Text("Messages"),
+
+                onTap: (){
+                  Navigator.pushNamed(context, '/message');
+
+                },
+              ),
+              ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: Icon(Icons.person_sharp,
+                    color: Colors.black,
+                    size: 30.0,
+                  ),
+                ),
+                title: Text("Profile"),
+
+                onTap: (){
+                  Navigator.pushNamed(context, '/User-profile');
+
+                },
+              ),
+              ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: Icon(Icons.settings,
+                    color: Colors.black,
+                    size: 30.0,
+                  ),
+                ),
+                title: Text("Settings"),
+                onTap: (){
+
+                },
+              ),
+              Divider(),
+              ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: Icon(Icons.help_outline,
+                    color: Colors.black,
+                    size: 30.0,
+                  ),
+                ),
+                title: Text("About us"),
+                onTap: (){
+                  Navigator.pushNamed(context, '/signup');
+                },
+              ),
+
+              ListTile(
+                leading: CircleAvatar(
+                  backgroundColor: Colors.grey,
+                  child: Icon(Icons.exit_to_app,
+                    color: Colors.black,
+                    size: 30.0,
+                  ),
+                ),
+                title: Text("Logout"),
+                onTap: () {
+                  Navigator.pushNamed(context, '/login');
+                },
+              ),
+            ],
+          ),
+        ),
         appBar: AppBar(
-          backgroundColor: Colors.redAccent,
+          backgroundColor: Color(0xFFAD1457),
           title: Center(
-            child: const Text('User Name'),
+            child: const Text('Profile'),
           ),
         ),
       body: ListView(
@@ -30,9 +137,8 @@ class _ProfilePageState extends State<ProfilePage> {
           Container(
             height: 250,
             decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [Colors.redAccent.shade200, Colors.deepOrange.shade700]
-              ),
+                color: Color(0xFFAD1457),
+
             ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -45,15 +151,14 @@ class _ProfilePageState extends State<ProfilePage> {
                   backgroundColor: Colors.red.shade300,
                   minRadius: 30.0,
                   child: Icon(
-                    Icons.remove_circle,
+                    Icons.close,
                     size: 25.0,
                   ),
                 ),
                 CircleAvatar(
-                  // backgroundColor: Colors.white70,
-                  // maxRadius: 60.0,
-                  // child: new Image.asset("assets/images/astranout.jpg"),
-                  //   radius: 50.0,
+                    backgroundColor: Colors.white70,
+                    maxRadius: 60.0,
+                    child:Icon( Icons.person_sharp, size: 50.0,)
 
 
                 ),
@@ -71,7 +176,7 @@ class _ProfilePageState extends State<ProfilePage> {
               height: 10,
             ),
             Text(
-              'User Name',
+              'Other User',
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
@@ -79,7 +184,7 @@ class _ProfilePageState extends State<ProfilePage> {
               ),
             ),
             Text(
-              '22 years old',
+              '29 years old',
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 22,
@@ -100,38 +205,36 @@ class _ProfilePageState extends State<ProfilePage> {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
-                  subtitle:Icon(
-                    Icons.check_circle_rounded,
-                    size: 25.0,
+                  subtitle:Text(
+                    'Wanderer, Hala Madrid',
+                    style: TextStyle(
+                      color: Colors.black87,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
                   ),
                   ),
 
                 Divider(),
                 ListTile(
                   title: Text(
-                    'social',
+                    'More Photos',
                     style: TextStyle(
                       color: Colors.deepOrange,
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
                     ),
-                  ),
-                  subtitle: Text(
-                    'link',
-                    style: TextStyle(
-                      fontSize: 18,
-                    ),
-                  ),
+                  )
                 ),
                 Divider(),
                 ListTile(
 
                   title: new Image.asset("assets/images/simba.jpg"),
-                  subtitle:  new Image.asset("assets/images/p!atd.jpg"),
+
                   ),
                 Divider(),
                 ListTile(
-                  title: new Image.asset("assets/images/lake.jpg"),
+
                   subtitle:  new Image.asset("assets/images/astranout.jpg"),
                 ),
               ],
