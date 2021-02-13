@@ -17,6 +17,8 @@ class _SwipeFeedPageState extends State<SwipeFeedPage> {
         elevation: 0.0,
         centerTitle: true,
         backgroundColor: Colors.white,
+        leading: IconButton(
+            onPressed: () {Navigator.pushNamed(context, '/setting');}, icon: Icon(Icons.settings, color: Colors.grey)),
       ),
       backgroundColor: Colors.white,
       body: Column(
@@ -42,12 +44,34 @@ class _SwipeFeedPageState extends State<SwipeFeedPage> {
           FloatingActionButton(
             heroTag: null,
             mini: true,
+            onPressed: () {},
+            backgroundColor: Colors.white,
+            child: Icon(Icons.close, color: Colors.red,),
+
+          ),
+          SizedBox(
+            width: 50,
+          ),
+          FloatingActionButton(
+            heroTag: null,
+            mini: true,
             onPressed: () {Navigator.pushNamed(context, '/profile');},
             backgroundColor: Colors.white,
             child: Icon(Icons.person_sharp, color: Colors.yellow),
           ),
+          SizedBox(
+            width: 50,
+          ),
+          FloatingActionButton(
+            heroTag: null,
+            mini: true,
+            onPressed: () {},
+            backgroundColor: Colors.white,
+            child: Icon(Icons.person_add_alt, color: Colors.green),
+          ),
         ],
       ),
+
     );
   }
 }

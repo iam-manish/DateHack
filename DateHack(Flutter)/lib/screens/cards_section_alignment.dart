@@ -164,6 +164,7 @@ class _CardsSectionState extends State<CardsSectionAlignment>
     _controller.stop();
     _controller.value = 0.0;
     _controller.forward();
+
   }
 }
 
@@ -185,7 +186,7 @@ class CardsAnimation {
       AnimationController parent) {
     return AlignmentTween(begin: cardsAlign[1], end: cardsAlign[2]).animate(
         CurvedAnimation(
-            parent: parent, curve: Interval(0.2, 0.5, curve: Curves.easeIn)));
+            parent: parent, curve: Interval(0.2, 0.5, curve: Curves.easeIn,)));
   }
 
   static Animation<Size> middleCardSizeAnim(AnimationController parent) {
@@ -203,6 +204,6 @@ class CardsAnimation {
             0.0) // Has swiped to the left or right?
     )
         .animate(CurvedAnimation(
-        parent: parent, curve: Interval(0.0, 0.5, curve: Curves.easeIn)));
+        parent: parent, curve: Interval(0.0, 0.5, curve: Curves.easeIn),));
   }
 }
