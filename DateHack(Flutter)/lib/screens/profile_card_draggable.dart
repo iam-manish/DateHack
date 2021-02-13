@@ -13,6 +13,7 @@ class ProfileCardDraggable extends StatelessWidget {
         children: <Widget>[
           Expanded(
             child: Image.asset('assets/images/lake.jpg'),
+
           ),
           Container(
               padding: EdgeInsets.symmetric(vertical: 32.0, horizontal: 16.0),
