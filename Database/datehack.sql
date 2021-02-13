@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 13, 2021 at 12:54 AM
+-- Generation Time: Feb 13, 2021 at 04:46 AM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `datehack`
 --
-CREATE DATABASE IF NOT EXISTS `datehack` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `datehack`;
 
 -- --------------------------------------------------------
 
@@ -29,6 +27,7 @@ USE `datehack`;
 -- Table structure for table `message`
 --
 
+DROP TABLE IF EXISTS `message`;
 CREATE TABLE `message` (
   `id` int(11) NOT NULL,
   `message` varchar(255) NOT NULL,
@@ -42,6 +41,7 @@ CREATE TABLE `message` (
 -- Table structure for table `notification`
 --
 
+DROP TABLE IF EXISTS `notification`;
 CREATE TABLE `notification` (
   `id` int(11) NOT NULL,
   `noti_details` varchar(255) NOT NULL,
@@ -54,6 +54,7 @@ CREATE TABLE `notification` (
 -- Table structure for table `user`
 --
 
+DROP TABLE IF EXISTS `user`;
 CREATE TABLE `user` (
   `id` int(11) NOT NULL,
   `first_name` varchar(30) NOT NULL,
@@ -72,8 +73,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `date_of_birth`, `phone_number`, `user_name`, `password`, `gender`, `profile`) VALUES
-(1, 'Test', 'User', 'test@gmail.com', '2021-02-08', '981234567', 'test123', 'hello', 'F', NULL),
-(13, 'Manish', 'Thapa', 'manish@gmail.com', '2021-02-13', '9813665817', 'manish12652', '$2y$10$qA6l5DRnW9DUKB1JdLRKze8rIZw9GgKZUpXD5QFsO2P/hqLpG2tXC', 'F', NULL);
+(1, 'Test', 'User', 'test@gmail.com', '2021-02-08', '981234567', 'test123', '$2y$10$qA6l5DRnW9DUKB1JdLRKze8rIZw9GgKZUpXD5QFsO2P/hqLpG2tXC', 'F', NULL),
+(13, 'Manish', 'Thapa', 'manish@gmail.com', '2021-02-13', '9813665817', 'manish12652', '$2y$10$qA6l5DRnW9DUKB1JdLRKze8rIZw9GgKZUpXD5QFsO2P/hqLpG2tXC', 'M', NULL);
 
 -- --------------------------------------------------------
 
@@ -81,6 +82,7 @@ INSERT INTO `user` (`id`, `first_name`, `last_name`, `email`, `date_of_birth`, `
 -- Table structure for table `user_block`
 --
 
+DROP TABLE IF EXISTS `user_block`;
 CREATE TABLE `user_block` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
@@ -94,6 +96,7 @@ CREATE TABLE `user_block` (
 -- Table structure for table `user_following`
 --
 
+DROP TABLE IF EXISTS `user_following`;
 CREATE TABLE `user_following` (
   `id` int(11) NOT NULL,
   `followed_by` int(11) NOT NULL,

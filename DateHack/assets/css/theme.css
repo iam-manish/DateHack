@@ -77,4 +77,57 @@
 .reject{
 	margin-left: 65%;
 }
+.user-details .fas{
+	cursor: pointer;
+}
 /*End Profile*/
+/*User Message*/
+.user-message{
+	border:2px solid #000;
+	width: 50%;
+	height: 80vh;
+}
+#user_message{
+	position: relative;
+	top: 69vh;
+}
+textarea{
+	width: 90%;
+	height: 50px;
+	resize: none;
+	overflow-y: scroll;
+}
+#send-btn{
+	position: relative;
+	top: 66vh;
+	width: 9%;
+	height: 50px;
+
+}
+.online-user{
+	margin-left: 6%;
+	width: 250px;
+	height: 100vh;
+	border:2px solid #000;
+}
+.online{
+	font-weight: bold;
+	font-size: 18px;
+	margin: 2%;
+}
+.online-person{
+	cursor: pointer;
+	margin: 2%;
+}
+.fa-dot-circle{
+	color: green;
+	float: right;
+}
+.chat-with{
+	background-color: #C73DCC;
+	color: #fff;
+}
+/*End */
+.fas{
+	cursor: pointer;
+}

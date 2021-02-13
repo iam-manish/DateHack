@@ -3,6 +3,7 @@ include_once 'autoLoader.php';
 	define('pageLoad',true);  
 	$db = new Model\Database();
 	$login = new controller\Home($db);
+	include_once 'config.php';
 
 	if(isset($_POST['submit'])){
 		$user_email = $_POST['user_email'];
@@ -33,6 +34,7 @@ include_once 'autoLoader.php';
   	<meta name="keywords" content="DateHack, Team CodexOrient, Search your date patner">
   	<meta name="author" content="Team Codex Orient">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<meta name="google-signin-client_id" content="419839512907-42og4jplpsj1vkuj69i5e3ib80hp3l50.apps.googleusercontent.com">
 	<!-- end of meta tags -->
 
 	<!-- links -->
@@ -72,5 +74,6 @@ include_once 'autoLoader.php';
 			
 		</div>
 	</div>
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
 </body>
 </html>

@@ -26,7 +26,6 @@ else{
 }
 
 $fetchUser = $db->seacrhPatner($searchGender);
-print_r($fetchUser)
 
 ?>
 <!DOCTYPE html>
@@ -41,9 +40,9 @@ print_r($fetchUser)
 </head>
 <body>
 	<div class="header-part">
-		<div class="site-logo"><img src="<?= base_url?>/images/app/logo.png" alt="website Logo"></div>
+		<div class="site-logo"><a href="index.php"><img src="<?= base_url?>/images/app/logo.png" alt="website Logo"></a></div>
 		<div class="user-details">
-			<i class="fas fa-comment-dots fa-2x"></i>
+			<a href="message.php"><i class="fas fa-comment-dots fa-2x"></i></a>
 			<i class="fas fa-bell fa-2x"></i>
 			<div class="profile-pic"><img class="rounded-circle" src="<?= base_url?>/images/user/<?php echo $profile_img;?>" alt="User Profile Pic"></div>
 		</div>
@@ -56,6 +55,7 @@ print_r($fetchUser)
 			<div class="user-profile"><i class="fas fa-users fa-3x"></i><p>Find Match</p></div>
 			<div class="user-profile"><i class="fa fa-heart fa-lg fa-3x"></i><p>Matches</p></div>
 			<div class="user-profile"><i class="fas fa-thumbs-up fa-lg fa-3x"></i><p>Likes</p></div>
+			<div class="user-profile"><i class="fas fa-sign-out-alt  fa-3x"></i><p style="cursor: pointer;"><a style="color: #000;text-decoration: none;"href="signout.php">Sign Out</a></p></div>
 		</div>
 		<div class="user-finder">
 			<div class="user-radius"><span style="color: #C73DCC">User</span> located with in  <span id="distance" style="color: #C73DCC"><?php echo "2"; ?></span> K.M.</div>
