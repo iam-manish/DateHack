@@ -17,6 +17,8 @@ class _SwipeFeedPageState extends State<SwipeFeedPage> {
         elevation: 0.0,
         centerTitle: true,
         backgroundColor: Colors.white,
+        leading: IconButton(
+            onPressed: () {Navigator.pushNamed(context, '/setting');}, icon: Icon(Icons.settings, color: Colors.grey)),
       ),
       backgroundColor: Colors.white,
       body: Column(

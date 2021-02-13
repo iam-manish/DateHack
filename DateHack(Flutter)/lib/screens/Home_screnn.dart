@@ -120,10 +120,10 @@ class HomePage extends StatelessWidget {
         backgroundColor: Color(0xFFAD1457),
         title: Text("DateMandu".toUpperCase()),
         centerTitle: true,
-
       ),
       //card corraussel
-      body: SwipeFeedPage(),
+      body:
+      SwipeFeedPage(),
 
 
        );
