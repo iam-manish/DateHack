@@ -24,6 +24,7 @@ include_once 'autoLoader.php';
 
 	}
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,6 +43,11 @@ include_once 'autoLoader.php';
 	<link rel="stylesheet" type="text/css" href="<?= base_url?>assets/font-awesome/css/all.min.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url?>assets/css/style.css">
 	<!-- end links  -->
+	<style type="text/css">
+		body{
+			overflow-x: hidden;
+		}
+	</style>
 </head>
 <body>
 	<div id="login-page">
@@ -64,6 +70,7 @@ include_once 'autoLoader.php';
 
 	  						<!-- Form Content End -->
 	  						<button type="submit" name="submit" class="btn btn-primary">Submit</button>
+
 	  					</div>
   					</form>
   					<div class="pass-reset"><a href="#">Forget Password</a></div>
@@ -76,4 +83,100 @@ include_once 'autoLoader.php';
 	</div>
 	<script src="https://apis.google.com/js/platform.js" async defer></script>
 </body>
+</html>
+
+<?php
+
+//index.php
+
+//Include Configuration File
+include('config.php');
+
+$login_button = '';
+
+
+if(isset($_GET["code"]))
+{
+
+ $token = $google_client->fetchAccessTokenWithAuthCode($_GET["code"]);
+
+
+ if(!isset($token['error']))
+ {
+ 
+  $google_client->setAccessToken($token['access_token']);
+
+ 
+  $_SESSION['access_token'] = $token['access_token'];
+
+
+  $google_service = new Google_Service_Oauth2($google_client);
+
+ 
+  $data = $google_service->userinfo->get();
+
+ 
+  if(!empty($data['given_name']))
+  {
+   $_SESSION['user_first_name'] = $data['given_name'];
+  }
+
+  if(!empty($data['family_name']))
+  {
+   $_SESSION['user_last_name'] = $data['family_name'];
+  }
+
+  if(!empty($data['email']))
+  {
+   $_SESSION['user_email_address'] = $data['email'];
+  }
+
+  if(!empty($data['gender']))
+  {
+   $_SESSION['user_gender'] = $data['gender'];
+  }
+
+  if(!empty($data['picture']))
+  {
+   $_SESSION['user_image'] = $data['picture'];
+  }
+ }
+}
+
+
+if(!isset($_SESSION['access_token']))
+{
+
+ $login_button = '<a href="'.$google_client->createAuthUrl().'">Login With Google</a>';
+}
+
+?>
+  <div class="container">
+   <br />
+   <br />
+   <div class="panel panel-default">
+   <?php
+   if($login_button == '')
+   {
+   	$_SESSION['userDetails']['first_name'] = $_SESSION['user_first_name'];
+   	$_SESSION['userDetails']['last_name'] = $_SESSION['user_last_name'];
+   	$_SESSION['userDetails']['profile'] = $_SESSION["user_image"];
+   	$_SESSION['userDetails']['email'] = $_SESSION['user_email_address'];
+   	$_SESSION['userDetails']['gender'] = "M";
+   	$_SESSION['google_login'] = true;
+   	header("location:ultra/index.php");
+    echo '<div class="panel-heading">Welcome User</div><div class="panel-body">';
+    echo '<img src="'.$_SESSION["user_image"].'" class="img-responsive img-circle img-thumbnail" />';
+    echo '<h3><b>Name :</b> '.$_SESSION['user_first_name'].' '.$_SESSION['user_last_name'].'</h3>';
+    echo '<h3><b>Email :</b> '.$_SESSION['user_email_address'].'</h3>';
+    echo '<h3><a href="logout.php">Logout</h3></div>';
+   }
+   else
+   {
+    echo '<div align="center" class="google-login">'.$login_button . '</div>';
+   }
+   ?>
+   </div>
+  </div>
+ </body>
 </html>

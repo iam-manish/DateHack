@@ -24,6 +24,9 @@ if($gender=="M"){
 else{
 	$searchGender = "M";
 }
+if(isset($_SESSION['google_login']) && $_SESSION['google_login'] == true){
+	$profile_img = "default.png";
+}
 
 $fetchUser = $db->seacrhPatner($searchGender);
 

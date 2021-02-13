@@ -355,11 +355,15 @@ input[type="submit"]{
 
 }
 .login-frm{
-	min-width: 1400px;
-	margin-left: 60px;
+	min-width: 1100px;
+	margin-left: 120px;
 }
 .btn a{
 	text-decoration: none;
 	color: #fff;
+}
+.google-login{
+	margin-top: -10%;
+	padding-bottom: 10%;
 }
 /*End of Login form*/
